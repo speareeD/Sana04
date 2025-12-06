@@ -22,5 +22,11 @@
             int totalMinutes = ((FinishDate.GetHours() - StartDate.GetHours()) * 60 + FinishDate.GetMinutes() - StartDate.GetMinutes()) % 60;
             Console.WriteLine($"You've been travelling for {totalHours} hours and {totalMinutes} minutes");
         }
+
+        public bool IsArrivingToday()
+        {
+            return StartDate.GetDays() == FinishDate.GetDays() &&
+                   StartDate.GetMonths() == FinishDate.GetMonths();
+        }
     }
 }
