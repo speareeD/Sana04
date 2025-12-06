@@ -16,5 +16,14 @@
             Hours = hours;
             Minutes = minutes;
         }
+
+        public MyDate(MyDate date)
+        {
+            Day = date.Day;
+            Month = date.Month;
+            Year = date.Year;
+            Hours = date.Hours;
+            Minutes = date.Minutes;
+        }
     }
 }
