@@ -15,11 +15,11 @@
             FinishDate = new MyDate(finishDate);
         }
 
-        public string GetTotalTime()
+        public void GetTotalTime()
         {
             int totalHours = FinishDate.GetHours() - StartDate.GetHours();
             int totalMinutes = FinishDate.GetMinutes() - StartDate.GetMinutes();
-            return $"You've been travelling for {totalHours} hours and {totalMinutes} minutes";
+            Console.WriteLine($"You've been travelling for {totalHours} hours and {totalMinutes} minutes");
         }
     }
 }
