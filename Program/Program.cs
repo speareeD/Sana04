@@ -8,7 +8,7 @@
                 "New York",
                 "Los Angeles",
                 new MyDate(1, 1, 2024, 10, 30),
-                new MyDate(1, 1, 2024, 13, 18)
+                new MyDate(2, 1, 2024, 13, 15)
             );
             airplane.GetTotalTime();
         }
