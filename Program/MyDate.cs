@@ -25,5 +25,15 @@
             Hours = date.Hours;
             Minutes = date.Minutes;
         }
+
+        public int GetHours()
+        {
+            return Hours;
+        }
+
+        public int GetMinutes()
+        {
+            return Minutes;
+        }
     }
 }
