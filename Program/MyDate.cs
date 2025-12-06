@@ -35,5 +35,15 @@
         {
             return Minutes;
         }
+
+        public int GetDays()
+        {
+            return Day;
+        }
+
+        public int GetMonths()
+        {
+            return Month;
+        }
     }
 }

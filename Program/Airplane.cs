@@ -17,8 +17,8 @@
 
         public void GetTotalTime()
         {
-            int totalHours = FinishDate.GetHours() - StartDate.GetHours();
-            int totalMinutes = FinishDate.GetMinutes() - StartDate.GetMinutes();
+            int totalHours = ((FinishDate.GetHours() - StartDate.GetHours()) * 60 + FinishDate.GetMinutes() - StartDate.GetMinutes()) / 60;
+            int totalMinutes = ((FinishDate.GetHours() - StartDate.GetHours()) * 60 + FinishDate.GetMinutes() - StartDate.GetMinutes()) % 60;
             Console.WriteLine($"You've been travelling for {totalHours} hours and {totalMinutes} minutes");
         }
     }
