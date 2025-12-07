@@ -17,6 +17,22 @@
             Minutes = minutes;
         }
 
+        public MyDate(int day, int hours, int minutes)
+        {
+            Day = day;
+            Hours = hours;
+            Minutes = minutes;
+        }
+
+        public MyDate()
+        {
+            Day = 1;
+            Month = 1;
+            Year = 2025;
+            Hours = 5;
+            Minutes = 5;
+        }
+
         public MyDate(MyDate date)
         {
             Day = date.Day;
