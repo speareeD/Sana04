@@ -42,24 +42,16 @@
             Minutes = date.Minutes;
         }
 
-        public int GetHours()
-        {
-            return Hours;
-        }
+        public int GetHours() => Hours;
 
-        public int GetMinutes()
-        {
-            return Minutes;
-        }
 
-        public int GetDays()
-        {
-            return Day;
-        }
+        public int GetMinutes() => Minutes;
 
-        public int GetMonths()
-        {
-            return Month;
-        }
+
+        public int GetDays() => Day;
+
+
+        public int GetMonths() => Month;
+
     }
 }
