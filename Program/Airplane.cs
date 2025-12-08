@@ -52,5 +52,15 @@
             return StartDate.GetDays() == FinishDate.GetDays() &&
                    StartDate.GetMonths() == FinishDate.GetMonths();
         }
+
+        public string GetStartCity() => StartCity;
+        public string GetFinishCity() => FinishCity;
+        public MyDate GetStartDate() => new MyDate(StartDate);
+        public MyDate GetFinishDate() => new MyDate(FinishDate);
+
+        public void SetStartCity(string startCity) => StartCity = startCity;
+        public void SetFinishCity(string finishCity) => FinishCity = finishCity;
+        public void SetStartDate(MyDate startDate) => StartDate = new MyDate(startDate);
+        public void SetFinishDate(MyDate finishDate) => FinishDate = new MyDate(finishDate);
     }
 }
