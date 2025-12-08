@@ -47,6 +47,21 @@
             Weight = 1.0;
         }
 
+        public double GetPriceInUAH()
+        {
+            return Price * Cost.GetExRate();
+        }
+
+        public double GetTotalPriceInUAH()
+        {
+            return GetPriceInUAH() * Quantity;
+        }
+
+        public double GetTotalWeight()
+        {
+            return Weight * Quantity;
+        }
+
         public string GetName() => Name;
         public double GetPrice() => Price;
         public Currency GetCost() => new Currency(Cost);
