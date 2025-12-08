@@ -46,5 +46,37 @@
             Producer = "Default Producer";
             Weight = 1.0;
         }
+
+        public string GetName() => Name;
+        public double GetPrice() => Price;
+        public Currency GetCost() => new Currency(Cost);
+        public int GetQuantity() => Quantity;
+        public string GetProducer() => Producer;
+        public double GetWeight() => Weight;
+
+        public void SetName(string name)
+        {
+            Name = name;
+        }
+        public void SetPrice(double price)
+        {
+            Price = price;
+        }
+        public void SetCost(Currency cost)
+        {
+            Cost = new Currency(cost);
+        }
+        public void SetQuantity(int quantity)
+        {
+            Quantity = quantity;
+        }
+        public void SetProducer(string producer)
+        {
+            Producer = producer;
+        }
+        public void SetWeight(double weight)
+        {
+            Weight = weight;
+        }
     }
 }
