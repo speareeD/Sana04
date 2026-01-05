@@ -41,16 +41,17 @@
 
         public int GetTotalTime()
         {
-            int totalHours = ((FinishDate.GetHours() - StartDate.GetHours()) * 60 +
-                FinishDate.GetMinutes() - StartDate.GetMinutes()) / 60 + (FinishDate.GetDays() - StartDate.GetDays()) * 24;
-            int totalMinutes = ((FinishDate.GetHours() - StartDate.GetHours()) * 60 + FinishDate.GetMinutes() - StartDate.GetMinutes()) % 60;
+            int totalHours = ((FinishDate.GetHour() - StartDate.GetHour()) * 60 +
+                FinishDate.GetMinute() - StartDate.GetMinute()) / 60 + (FinishDate.GetDay() - StartDate.GetDay()) * 24;
+            int totalMinutes = ((FinishDate.GetHour() - StartDate.GetHour()) * 60 + FinishDate.GetMinute() - StartDate.GetMinute()) % 60;
             return totalMinutes + totalHours * 60;
         }
 
         public bool IsArrivingToday()
         {
-            return StartDate.GetDays() == FinishDate.GetDays() &&
-                   StartDate.GetMonths() == FinishDate.GetMonths();
+            return StartDate.GetDay() == FinishDate.GetDay() &&
+                   StartDate.GetMonth() == FinishDate.GetMonth() &&
+                   StartDate.GetYear() == FinishDate.GetYear();
         }
 
         public string GetStartCity() => StartCity;
