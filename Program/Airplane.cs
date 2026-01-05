@@ -15,9 +15,9 @@
             FinishDate = new MyDate(finishDate);
         }
 
-        public Airplane(string startCity, string finishCity, MyDate startDate, MyDate finishDate, string airplaneName)
+        public Airplane(string finishCity, MyDate startDate, MyDate finishDate)
         {
-            StartCity = startCity;
+            StartCity = "Zhytomyr";
             FinishCity = finishCity;
             StartDate = new MyDate(startDate);
             FinishDate = new MyDate(finishDate);
@@ -39,12 +39,12 @@
             FinishDate = new MyDate(1, 6, 15);
         }
 
-        public void GetTotalTime()
+        public int GetTotalTime()
         {
             int totalHours = ((FinishDate.GetHours() - StartDate.GetHours()) * 60 +
                 FinishDate.GetMinutes() - StartDate.GetMinutes()) / 60 + (FinishDate.GetDays() - StartDate.GetDays()) * 24;
             int totalMinutes = ((FinishDate.GetHours() - StartDate.GetHours()) * 60 + FinishDate.GetMinutes() - StartDate.GetMinutes()) % 60;
-            Console.WriteLine($"You've been travelling for {totalHours} hours and {totalMinutes} minutes");
+            return totalMinutes + totalHours * 60;
         }
 
         public bool IsArrivingToday()
