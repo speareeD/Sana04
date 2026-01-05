@@ -8,11 +8,10 @@
                 "New York",
                 "Los Angeles",
                 new MyDate(1, 1, 2024, 10, 30),
-                new MyDate(1, 1, 2024, 13, 15)
+                new MyDate(2, 1, 2024, 13, 15)
             );
-            airplane.GetTotalTime();
-            bool arrivingToday = airplane.IsArrivingToday();
-            Console.WriteLine($"You will arrive today: {arrivingToday}\n");
+            Console.WriteLine("Total travel time: " + airplane.GetTotalTime() + " minutes");
+            Console.WriteLine($"You will arrive today: {airplane.IsArrivingToday()}\n");
 
             Product product = new Product(
                 "Laptop",
