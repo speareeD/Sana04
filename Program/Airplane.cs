@@ -41,10 +41,21 @@
 
         public int GetTotalTime()
         {
-            int totalHours = ((FinishDate.GetHour() - StartDate.GetHour()) * 60 +
-                FinishDate.GetMinute() - StartDate.GetMinute()) / 60 + (FinishDate.GetDay() - StartDate.GetDay()) * 24;
-            int totalMinutes = ((FinishDate.GetHour() - StartDate.GetHour()) * 60 + FinishDate.GetMinute() - StartDate.GetMinute()) % 60;
-            return totalMinutes + totalHours * 60;
+            int startTotalMinutes = StartDate.GetHours() * 60 + StartDate.GetMinutes();
+            int finishTotalMinutes = FinishDate.GetHours() * 60 + FinishDate.GetMinutes();
+            if (FinishDate.GetDay() != StartDate.GetDay())
+            {
+                finishTotalMinutes += 24 * 60;
+            }
+            if (FinishDate.GetMonth() != StartDate.GetMonth())
+            {
+                finishTotalMinutes += 30 * 24 * 60;
+            }
+            if (FinishDate.GetYear() != StartDate.GetYear())
+            {
+                finishTotalMinutes += 365 * 24 * 60;
+            }
+            return finishTotalMinutes - startTotalMinutes;
         }
 
         public bool IsArrivingToday()
