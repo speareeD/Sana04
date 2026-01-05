@@ -42,15 +42,15 @@
             Minutes = date.Minutes;
         }
 
-        public int GetHours() => Hours;
-        public int GetMinutes() => Minutes;
-        public int GetDays() => Day;
-        public int GetMonths() => Month;
-        public int GetYears() => Year;
+        public int GetHour() => Hours;
+        public int GetMinute() => Minutes;
+        public int GetDay() => Day;
+        public int GetMonth() => Month;
+        public int GetYear() => Year;
 
-        public void SetHours(int hours) => Hours = hours;
-        public void SetMinutes(int minutes) => Minutes = minutes;
-        public void SetDays(int days) => Day = days;
+        public void SetHour(int hours) => Hours = hours;
+        public void SetMinute(int minutes) => Minutes = minutes;
+        public void SetDay(int days) => Day = days;
         public void SetMonth(int month) => Month = month;
         public void SetYear(int year) => Year = year;
 
